@@ -149,7 +149,7 @@ a {
 }
 .icon--small {
   width: 30px;
-  height: ;
+  height: 30px;
 }
 /* Use single - to seperate words */
 .icon-container {
@@ -446,19 +446,7 @@ a {
 .callout__content {
   text-align: center;
 }
-@media screen and (min-width: 768px) {
-  .callout .grid--1x2 {
-    grid-template-columns: 1fr auto;
-    /* text uses all extra space, button placed at end always  */
-  }
-  .callout__content {
-    text-align: left;
-  }
-  .callout .btn {
-    justify-self: start; /*Property Applied To Grid Item*/
-    margin: 0 2rem;
-  }
-}
+
 /* Collapsable */
 .collapsable__header {
   display: flex;
@@ -518,4 +506,57 @@ a {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+/* Navagation */
+.nav {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+.nav__item {
+  padding: 0 2rem;
+  border-bottom: 1px solid rgb(126, 126, 126);
+}
+.nav__item > a {
+  color: #d2d0bd;
+  transition: color 0.3s;
+}
+.nav__item > a:hover {
+  color: white;
+}
+.nav__toggler {
+  opacity: 0.5;
+  transition: opacity 0.5s, box-shadow 0.15s;
+  cursor: pointer;
+}
+/* Only works on elements that have both nav and collapisble--expanded */
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px gray;
+  border-radius: 5px;
+}
+.nav__brand {
+  transform: translateY(5px);
+}
+@media screen and (min-width: 768px) {
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    opacity: 1;
+    max-height: 100%;
+  }
+  .nav__item {
+    border: none;
+  }
+  .nav__toggler {
+    display: none;
+  }
 }
