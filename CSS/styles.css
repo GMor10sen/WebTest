@@ -211,6 +211,10 @@ a {
   background: var(--color-headings);
   color: white;
 }
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -379,6 +383,7 @@ a {
 .grid {
   display: grid;
 }
+
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
@@ -418,5 +423,39 @@ a {
   .testimonial .quote {
     margin-left: 6rem;
     margin-right: 0;
+  }
+}
+/* Callouts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+.callout--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.callout__heading {
+  color: white;
+  margin-top: 0;
+  font-size: 3rem;
+}
+.callout .btn {
+  justify-self: center; /*Property Applied To Grid Item*/
+  align-self: center;
+}
+.callout__content {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+    /* text uses all extra space, button placed at end always  */
+  }
+  .callout__content {
+    text-align: left;
+  }
+  .callout .btn {
+    justify-self: start; /*Property Applied To Grid Item*/
+    margin: 0 2rem;
   }
 }
