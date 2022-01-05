@@ -177,7 +177,7 @@ a {
   cursor: pointer;
   font-size: 1.8rem;
   font-weight: 600;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -254,6 +254,7 @@ a {
   border: 0;
   padding: 0.5rem 2rem;
   flex-grow: 1;
+  width: 0;
 }
 .input-group .btn {
   margin: 4px;
@@ -625,9 +626,10 @@ a {
   max-width: 670px;
 }
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 6rem 6rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
